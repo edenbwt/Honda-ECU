@@ -1,10 +1,10 @@
 
-# Honda D-Series Custom ECU (Teensy 3.5/3.6-Based)
+# Honda D-Series Custom ECU
 
 ## Project Overview
 The goal of this project is to design a custom ECU for a Honda D-series engine, initially supporting a basic naturally aspirated (NA) setup. The ECU will control the engine's fuel injection, ignition timing, and key sensors, replacing the stock OBD1 ECU. Future upgrades are planned for a turbocharged build, ethanol (E85) fuel support, and additional features such as boost control and coil-on-plug ignition.
 
-This custom ECU is based on the Teensy 3.5/3.6 microcontroller to provide the necessary processing power, flexibility, and I/O for engine management. The design will follow a modular approach, allowing future expansion to support more advanced features.
+This custom ECU board have the goal of providing the necessary processing power, flexibility, and I/O for engine management. The design will follow a modular approach, allowing future expansion to support more advanced features.
 
 ## Phase 1: Basic ECU Design (NA Setup)
 
