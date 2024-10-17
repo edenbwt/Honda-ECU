@@ -3879,6 +3879,44 @@
 			)
 		)
 	)
+	(sheet
+		(at 31.75 172.72)
+		(size 17.78 17.78)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "afc3ecb9-7dbb-4184-85a7-4cc7f97680fc")
+		(property "Sheetname" "Power"
+			(at 31.75 172.0084 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "power.kicad_sch"
+			(at 31.75 191.0846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Board_v0.0..1"
+				(path "/84a654bf-6339-4456-82e8-fc3535e299fc"
+					(page "2")
+				)
+			)
+		)
+	)
 	(sheet_instances
 		(path "/"
 			(page "1")
