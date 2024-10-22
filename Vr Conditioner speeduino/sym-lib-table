@@ -1,0 +1,5 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "2021-02-17_17-37-40")(type "Legacy")(uri "${KIPRJMOD}/2021-02-17_17-37-40.lib")(options "")(descr ""))
+  (lib (name "VR-Conditioner-MAX9926+reg-rescue")(type "KiCad")(uri "${KIPRJMOD}/VR-Conditioner-MAX9926+reg-rescue.kicad_sym")(options "")(descr ""))
+)
