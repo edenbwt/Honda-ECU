@@ -2705,6 +2705,44 @@
 		)
 	)
 	(sheet
+		(at 27.94 41.91)
+		(size 12.7 10.16)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "299b16f2-a70e-472f-b9ec-67eb4664b1b1")
+		(property "Sheetname" "Sensor"
+			(at 27.94 41.1984 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Sensor.kicad_sch"
+			(at 27.94 52.6546 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Board_v0.0..1"
+				(path "/84a654bf-6339-4456-82e8-fc3535e299fc"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
 		(at 57.15 24.13)
 		(size 12.7 11.43)
 		(fields_autoplaced yes)
