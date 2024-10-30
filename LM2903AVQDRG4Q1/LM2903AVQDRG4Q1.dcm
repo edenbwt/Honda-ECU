@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP LM2903AVQDRG4Q1
+D AEC-Q100, Grade 0 and 1, Automotive High Voltage Dual Differential Comparator
+K
+F http://www.ti.com/lit/gpn/LM2903-Q1
+$ENDCMP
+#
+#End Doc Library

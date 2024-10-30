@@ -1554,6 +1554,17 @@
 		)
 		(uuid "f990facf-1b5c-4a8d-bbe0-c83653a07e3c")
 	)
+	(text "//need to add KNOCK sensor\n\n"
+		(exclude_from_sim no)
+		(at 110.49 132.334 0)
+		(effects
+			(font
+				(size 1.8796 1.8796)
+			)
+			(justify left bottom)
+		)
+		(uuid "505051ab-6bdc-4d69-b385-188b8094003d")
+	)
 	(text "O2 Sensor (Narrowband)"
 		(exclude_from_sim no)
 		(at 40.64 27.94 0)

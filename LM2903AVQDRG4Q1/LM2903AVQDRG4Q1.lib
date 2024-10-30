@@ -1,0 +1,29 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#SamacSys ECAD Model LM2903AVQDRG4Q1
+#/957539/1510523/2.50/8/3/Integrated Circuit
+DEF LM2903AVQDRG4Q1 IC 0 30 Y Y 1 F N
+F0 "IC" 1150 300 50 H V L CNN
+F1 "LM2903AVQDRG4Q1" 1150 200 50 H V L CNN
+F2 "SOIC127P600X175-8N" 1150 100 50 H I L CNN
+F3 "http://www.ti.com/lit/gpn/LM2903-Q1" 1150 0 50 H I L CNN
+F4 "AEC-Q100, Grade 0 and 1, Automotive High Voltage Dual Differential Comparator" 1150 -100 50 H I L CNN "Description"
+F5 "1.75" 1150 -200 50 H I L CNN "Height"
+F6 "595-LM2903AVQDRG4Q1" 1150 -300 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/LM2903AVQDRG4Q1?qs=O1dwhy606JcOTJmJkk8SCQ%3D%3D" 1150 -400 50 H I L CNN "Mouser Price/Stock"
+F8 "Texas Instruments" 1150 -500 50 H I L CNN "Manufacturer_Name"
+F9 "LM2903AVQDRG4Q1" 1150 -600 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+X 1OUT 1 0 0 200 R 50 50 0 0 P
+X 1IN- 2 0 -100 200 R 50 50 0 0 P
+X 1IN+ 3 0 -200 200 R 50 50 0 0 P
+X GND 4 0 -300 200 R 50 50 0 0 P
+X VCC 8 1300 0 200 L 50 50 0 0 P
+X 2OUT 7 1300 -100 200 L 50 50 0 0 P
+X 2IN- 6 1300 -200 200 L 50 50 0 0 P
+X 2IN+ 5 1300 -300 200 L 50 50 0 0 P
+P 5 0 1 6 200 100 1100 100 1100 -400 200 -400 200 100 N
+ENDDRAW
+ENDDEF
+#
+#End Library
