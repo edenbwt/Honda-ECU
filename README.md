@@ -39,7 +39,7 @@ The initial design will focus on the core functionality to control a naturally a
 ### 2. Ignition Control
 - **Distributor Setup**: The stock Honda OBD1 distributor with an internal igniter is used for ignition timing control.
   - The Teensy will trigger the igniter module with a logic-level pulse, which in turn drives the ignition coil.
-  - **VR Sensor Signal Conditioning**: A VR conditioner circuit (e.g., MAX9926) will be used to process crank and cam signals from the distributor.
+  - **VR Sensor Signal Conditioning**: A VR conditioner circuit (JDM VR Conditioner) will be used to process crank and cam signals from the distributor.
   - ![alt text](https://www.diyautotune.com/wp-content/uploads/conditioner_settings.png)
   - https://mcs.woodward.com/content/motohawk/Documentation/MotoHawk2015bSP0/HTML/MotoHawk_topics/VRInterfacing.html
   
