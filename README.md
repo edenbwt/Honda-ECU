@@ -1,5 +1,6 @@
 # Honda D-Series Custom ECU 🚗🔧
-![image](https://github.com/user-attachments/assets/0cff1368-14d9-43fc-953e-91b0c204f0a2)
+![image](https://github.com/user-attachments/assets/e8978d20-c5d4-4e09-a5d5-d8dd63e53b35)
+
 
 ## Project Overview 🌟
 
