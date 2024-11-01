@@ -1,10 +1,6 @@
-
-![image](https://github.com/user-attachments/assets/e8978d20-c5d4-4e09-a5d5-d8dd63e53b35)
-
-
 ## Project Overview 🌟
 
-Welcome to the **Honda D-Series Custom ECU** project! This project is all about designing a custom, feature-rich ECU for Honda’s beloved D-series engines. We're starting with a basic **naturally aspirated (NA) setup** to get things rolling. Later on, we’ll be expanding this ECU to handle **turbocharging, ethanol (E85) fuel**, and more advanced features like **boost control and coil-on-plug ignition**.
+Welcome to the **Honda D-Series Custom ECU** project! This project is dedicated to designing a feature-rich, custom ECU for Honda's beloved D-series engines. We’re starting with a basic **naturally aspirated (NA) setup** and planning to expand for **turbocharging, ethanol (E85) fuel**, and advanced features like **boost control and coil-on-plug ignition**.
 
 Our goal: to create a powerful, flexible, and modular ECU that can evolve alongside your Honda build.
 
@@ -16,21 +12,22 @@ To start, we’re focusing on the essential components needed to run a naturally
 
 ### Key Features
 - **Fuel Injection Control** – Supports batch or semi-sequential injection for smooth performance.
-- **Ignition Timing Control** – Using the stock Honda distributor and internal igniter for precise timing.
+- **Ignition Timing Control** – Utilizing the stock Honda distributor and internal igniter for precise timing.
 - **Sensor Inputs** – Connects to MAP, TPS, IAT, ECT, and O2 sensors for engine monitoring and control.
-- **Idle Air Control (IAC)** – Control of either 2-wire or 3-wire IACVs.
-- **Power Supply & Signal Conditioning** – Ensuring reliable and stable signal processing.
+- **Idle Air Control (IAC)** – Control for either 2-wire or 3-wire IACVs.
+- **Power Supply & Signal Conditioning** – Ensures reliable and stable signal processing.
 
 ---
 
-## 🧠 Teensy 3.5/3.6 MCU Selection
+## 🧠 Teensy 4.1 MCU Selection
 
-We’ve chosen the **Teensy 3.5/3.6** as our microcontroller for this ECU project. Why? Because it offers:
-- **Power & Speed** – With 120-180 MHz processing power, it's faster than the Arduino Mega often used in Speeduino ECUs.
-- **Expandable I/O** – Enough I/O to manage a 4-cylinder engine today and more advanced features tomorrow.
-- **3.3V Logic with 5V Input Tolerance** – Works with both 3.3V and 5V signals for broad compatibility.
+For this ECU project, we've chosen the **Teensy 4.1** as our microcontroller. The Teensy 4.1 offers significant improvements over previous versions, making it ideal for both current and future expansion:
 
-This board sets us up for current and future performance needs, whether it's sequential injection, turbo control, or ethanol adjustments. ⚡
+- **Increased Power & Speed** – With a 600 MHz processing speed, the Teensy 4.1 provides faster, smoother performance than the Teensy 3.5/3.6.
+- **Ample I/O and Expandability** – It has sufficient I/O to handle a 4-cylinder engine now and more advanced features as we expand.
+- **3.3V Logic Compatibility** – Compatible with both 3.3V and 5V inputs, ensuring flexibility across various sensor setups.
+
+This board sets us up to handle sequential injection, turbo control, ethanol adjustments, and more advanced functionality in the future. ⚡
 
 ---
 
@@ -63,31 +60,31 @@ We’ll connect to the following sensors:
 
 ---
 
-## 🔌 Honda ECU Plug to Teensy 3.5 Pinout Mapping
+## 🔌 Honda ECU Plug to Teensy 4.1 Pinout Mapping
 
-Here’s a quick look at how we’re mapping the stock Honda ECU connector (TE-3-178780-76P) to the Teensy 3.5:
+Here’s a quick look at how we’re mapping the stock Honda ECU connector (TE-3-178780-76P) to the Teensy 4.1:
 
-|   Honda ECU Pin | Function                  | Teensy Pin | Function                 | Signal Type               |
-|-----------------|---------------------------|------------|--------------------------|---------------------------|
-| A7              | TPS (Throttle Position)   | A0         | Analog input (TPS)       | Positive (0-5V)           |
-| D17             | MAP Sensor                | A1         | Analog input (MAP)       | Positive (0-5V)           |
-| A8              | ECT (Coolant Temp)        | A2         | Analog input (ECT)       | Positive (0-5V)           |
-| D14             | IAT (Intake Air Temp)     | A3         | Analog input (IAT)       | Positive (0-5V)           |
-| C2              | CKP (Crankshaft Position) | D2         | Digital input (CKP)      | Positive Pulse            |
-| C1              | TDC (Top Dead Center)     | D3         | Digital input (TDC)      | Positive Pulse            |
-| D10             | O2 Sensor (Narrowband)    | A9         | Analog input (O2)        | Positive (0-5V)           |
-| C11             | VSS (Vehicle Speed Sensor)| D4         | Digital input (VSS)      | Positive Pulse            |
-| B16             | Ignition Signal           | D5         | Digital output (Ignition)| Negative (Active Low)     |
-| A11             | Injector 1 (Cyl 1)        | D6         | Digital output (Inj 1)   | Negative (Active Low)     |
-| A12             | Injector 2 (Cyl 2)        | D7         | Digital output (Inj 2)   | Negative (Active Low)     |
-| A14             | Injector 3 (Cyl 3)        | D8         | Digital output (Inj 3)   | Negative (Active Low)     |
-| A15             | Injector 4 (Cyl 4)        | D9         | Digital output (Inj 4)   | Negative (Active Low)     |
-| A9              | IACV                      | D10        | Digital output (IACV)    | Positive (Active High)    |
-| P20             | Fuel Pump Control         | D11        | Digital output (Fuel Pump Relay) | Negative (Active Low) |
-| A4              | VTEC Solenoid             | D12        | Digital output (VTEC)    | Positive (Active High)    |
+| Honda ECU Pin | Function                  | Teensy Pin | Function                 | Signal Type               |
+|---------------|---------------------------|------------|--------------------------|---------------------------|
+| A7            | TPS (Throttle Position)   | A0         | Analog input (TPS)       | Positive (0-5V)           |
+| D17           | MAP Sensor                | A1         | Analog input (MAP)       | Positive (0-5V)           |
+| A8            | ECT (Coolant Temp)        | A2         | Analog input (ECT)       | Positive (0-5V)           |
+| D14           | IAT (Intake Air Temp)     | A3         | Analog input (IAT)       | Positive (0-5V)           |
+| C2            | CKP (Crankshaft Position) | D2         | Digital input (CKP)      | Positive Pulse            |
+| C1            | TDC (Top Dead Center)     | D3         | Digital input (TDC)      | Positive Pulse            |
+| D10           | O2 Sensor (Narrowband)    | A9         | Analog input (O2)        | Positive (0-5V)           |
+| C11           | VSS (Vehicle Speed Sensor)| D4         | Digital input (VSS)      | Positive Pulse            |
+| B16           | Ignition Signal           | D5         | Digital output (Ignition)| Negative (Active Low)     |
+| A11           | Injector 1 (Cyl 1)        | D6         | Digital output (Inj 1)   | Negative (Active Low)     |
+| A12           | Injector 2 (Cyl 2)        | D7         | Digital output (Inj 2)   | Negative (Active Low)     |
+| A14           | Injector 3 (Cyl 3)        | D8         | Digital output (Inj 3)   | Negative (Active Low)     |
+| A15           | Injector 4 (Cyl 4)        | D9         | Digital output (Inj 4)   | Negative (Active Low)     |
+| A9            | IACV                      | D10        | Digital output (IACV)    | Positive (Active High)    |
+| P20           | Fuel Pump Control         | D11        | Digital output (Fuel Pump Relay) | Negative (Active Low) |
+| A4            | VTEC Solenoid             | D12        | Digital output (VTEC)    | Positive (Active High)    |
 
-This mapping is the backbone of our custom ECU, connecting the Teensy 3.5 to every critical sensor, injector, and ignition signal. With these mappings, our ECU has full control over fuel, spark, and monitoring.
+This mapping is the backbone of our custom ECU, connecting the Teensy 4.1 to every critical sensor, injector, and ignition signal. With these mappings, our ECU has full control over fuel, spark, and monitoring.
 
 ---
 
-Let’s bring new life to the Honda D-series engine! Feel free to contribute or give feedback – let's create a custom ECU that unlocks every bit of potential in these engines.
+Let’s bring new life to the Honda D-series engine! Feel free to contribute or give feedback – together, we can create a custom ECU that maximizes the potential of these engines.
