@@ -1,3 +1,4 @@
+![image](https://github.com/user-attachments/assets/e8978d20-c5d4-4e09-a5d5-d8dd63e53b35)
 ## Project Overview 🌟
 
 Welcome to the **Honda D-Series Custom ECU** project! This project is dedicated to designing a feature-rich, custom ECU for Honda's beloved D-series engines. We’re starting with a basic **naturally aspirated (NA) setup** and planning to expand for **turbocharging, ethanol (E85) fuel**, and advanced features like **boost control and coil-on-plug ignition**.
