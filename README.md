@@ -63,7 +63,7 @@ We’ll connect to the following sensors:
 
 ## 🔌 Honda ECU Plug to Teensy 4.1 Pinout Mapping
 
-Here’s a quick look at how we’re mapping the stock Honda ECU connector (TE-3-178780-76P) to the Teensy 4.1:
+Here’s a quick look at how we’re mapping the stock Honda ECU connector (179686-6) to the Teensy 4.1:
 
 | Honda ECU Pin | Function                             | Teensy Pin | Function                       | Signal Type                 |
 |---------------|--------------------------------------|------------|--------------------------------|-----------------------------|
