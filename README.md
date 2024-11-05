@@ -65,24 +65,27 @@ We’ll connect to the following sensors:
 
 Here’s a quick look at how we’re mapping the stock Honda ECU connector (TE-3-178780-76P) to the Teensy 4.1:
 
-| Honda ECU Pin | Function                  | Teensy Pin | Function                 | Signal Type               |
-|---------------|---------------------------|------------|--------------------------|---------------------------|
-| A7            | TPS (Throttle Position)   | A0         | Analog input (TPS)       | Positive (0-5V)           |
-| D17           | MAP Sensor                | A1         | Analog input (MAP)       | Positive (0-5V)           |
-| A8            | ECT (Coolant Temp)        | A2         | Analog input (ECT)       | Positive (0-5V)           |
-| D14           | IAT (Intake Air Temp)     | A3         | Analog input (IAT)       | Positive (0-5V)           |
-| C2            | CKP (Crankshaft Position) | D2         | Digital input (CKP)      | Positive Pulse            |
-| C1            | TDC (Top Dead Center)     | D3         | Digital input (TDC)      | Positive Pulse            |
-| D10           | O2 Sensor (Narrowband)    | A9         | Analog input (O2)        | Positive (0-5V)           |
-| C11           | VSS (Vehicle Speed Sensor)| D4         | Digital input (VSS)      | Positive Pulse            |
-| B16           | Ignition Signal           | D5         | Digital output (Ignition)| Negative (Active Low)     |
-| A11           | Injector 1 (Cyl 1)        | D6         | Digital output (Inj 1)   | Negative (Active Low)     |
-| A12           | Injector 2 (Cyl 2)        | D7         | Digital output (Inj 2)   | Negative (Active Low)     |
-| A14           | Injector 3 (Cyl 3)        | D8         | Digital output (Inj 3)   | Negative (Active Low)     |
-| A15           | Injector 4 (Cyl 4)        | D9         | Digital output (Inj 4)   | Negative (Active Low)     |
-| A9            | IACV                      | D10        | Digital output (IACV)    | Positive (Active High)    |
-| P20           | Fuel Pump Control         | D11        | Digital output (Fuel Pump Relay) | Negative (Active Low) |
-| A4            | VTEC Solenoid             | D12        | Digital output (VTEC)    | Positive (Active High)    |
+| Honda ECU Pin | Function                             | Teensy Pin | Function                       | Signal Type                 |
+|---------------|--------------------------------------|------------|--------------------------------|-----------------------------|
+| A1            | Injector #4                          | D6         | Digital output (Inj 4)         | Low side, 1.5A (Active Low) |
+| A2            | Injector #3                          | D7         | Digital output (Inj 3)         | Low side, 1.5A (Active Low) |
+| A3            | Injector #2                          | D8         | Digital output (Inj 2)         | Low side, 1.5A (Active Low) |
+| A4            | Injector #1                          | D9         | Digital output (Inj 1)         | Low side, 1.5A (Active Low) |
+| A11           | Ignition Power                       | VIN        | Power Input                    | Key-On Power                 |
+| A16           | Fuel Pump Relay Control              | D10        | Digital output (Fuel Pump)     | Low side, Relay Control      |
+| A18           | MIL (Malfunction Indicator Light)    | D11        | Digital output (MIL)           | Low side, Lamp Control       |
+| A20           | Ignition Control Module              | D12        | Digital output (Ignition Ctrl) | Inverted dwell control       |
+| A24           | Ignition Power #2                    | VIN        | Power Input                    | Key-On Power                 |
+| A27           | Radiator Fan Control                 | D13        | Digital output (Fan Control)   | Low side, Relay Control      |
+| C1            | Crank Fluctuation Sensor Positive    | A0         | Analog input (Crank Signal)    | VR+                          |
+| C2            | Crank Position Sensor Positive       | A1         | Analog input (Crank Pos)       | VR+                          |
+| C3            | Top Dead Center Sensor Positive      | A2         | Analog input (TDC Signal)      | VR+                          |
+| D1            | TPS (Throttle Position Sensor)       | A3         | Analog input (TPS)             | 0-5V Analog                  |
+| D2            | ECT (Engine Coolant Temp Sensor)     | A4         | Analog input (ECT)             | 0-5V Analog                  |
+| D3            | MAP (Manifold Absolute Pressure)     | A5         | Analog input (MAP)             | 0-5V Analog                  |
+| D7            | Primary Oxygen Sensor Signal         | A6         | Analog input (O2)              | 0-5V Analog                  |
+| D8            | IAT (Intake Air Temperature)         | A7         | Analog input (IAT)             | 0-5V Analog                  |
+
 
 This mapping is the backbone of our custom ECU, connecting the Teensy 4.1 to every critical sensor, injector, and ignition signal. With these mappings, our ECU has full control over fuel, spark, and monitoring.
 
